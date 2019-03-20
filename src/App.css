@@ -1,33 +1,68 @@
 .App {
+  width: 40%;
+  margin: 50px auto 0 auto;
+  overflow: hidden;
+  font-size: 0;
+  height: 500px;
+}
+
+.App * {
+  font-size: 16px;
+}
+
+.display {
+  width: 100%;
+  height: 60px;
+  text-align: right;
+  background: orange;
+  border: solid 1px orange;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.display * {
+  padding-right: 10px;
+}
+
+.buttons {
+  padding-top: 20px;
+  width: 100%;
+  background: black;
+  border: solid 1px black;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 100%;
+}
+
+.numbers {
+  width: 73%;
+  margin-right: 2%;
+  float: left;
+  overflow: hidden;
+}
+
+.numbers .button {
+  width: 30%;
+}
+
+.button {
+  margin: 5px;
+  display: inline-block;
+  height: 60px;
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  line-height: 60px;
+  border: solid 1px gray;
+  background: grey;
   color: white;
+  border-radius: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.operators {
+  float: left;
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.operators .button {
+  width: 90%;
 }
