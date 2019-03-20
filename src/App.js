@@ -18,7 +18,7 @@ this.state={output:0,
   multiply = (number) => this.setState({output:this.state.output*number})
   divide = (number) => this.setState({output:this.state.output/number})
   setOperation = (symbol) => this.setState({operation:symbol})
-  
+  resetNumber = () => this.setState({output:0})
  ;
 changeOperation = (symbol) =>{
 
@@ -99,6 +99,10 @@ default:
 
 <CalcButton value = {'/'} onClick = {this.changeOperation}
 />
+
+<CalcButton value = {'Reset'} onClick = {this.resetNumber}
+/>
+
 
 <h1>{this.state.output}</h1>
       </div>
