@@ -56,28 +56,33 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CalcButton value={1} onClick={this.operate} />
-        <CalcButton value={2} onClick={this.operate} />
-        <CalcButton value={3} onClick={this.operate} />
-        <CalcButton value={4} onClick={this.operate} />
-        <CalcButton value={5} onClick={this.operate} />
-        <CalcButton value={6} onClick={this.operate} />
-        <CalcButton value={7} onClick={this.operate} />
-        <CalcButton value={8} onClick={this.operate} />
-        <CalcButton value={9} onClick={this.operate} />
-        <CalcButton value={0} onClick={this.operate} />
+        <div className="display">
+          <h1>{this.state.output}</h1>
+        </div>
+        <div className="buttons">
+          <div className="numbers">
+            <CalcButton value={1} onClick={this.operate} />
+            <CalcButton value={2} onClick={this.operate} />
+            <CalcButton value={3} onClick={this.operate} />
+            <CalcButton value={4} onClick={this.operate} />
+            <CalcButton value={5} onClick={this.operate} />
+            <CalcButton value={6} onClick={this.operate} />
+            <CalcButton value={7} onClick={this.operate} />
+            <CalcButton value={8} onClick={this.operate} />
+            <CalcButton value={9} onClick={this.operate} />
+            <CalcButton value={0} onClick={this.operate} />
+          </div>
+          <div className="operators">
+            <CalcButton value={"+"} onClick={this.changeOperation} />
 
-        <CalcButton value={"+"} onClick={this.changeOperation} />
+            <CalcButton value={"-"} onClick={this.changeOperation} />
 
-        <CalcButton value={"-"} onClick={this.changeOperation} />
+            <CalcButton value={"*"} onClick={this.changeOperation} />
 
-        <CalcButton value={"*"} onClick={this.changeOperation} />
-
-        <CalcButton value={"/"} onClick={this.changeOperation} />
-
-        <CalcButton value={"Reset"} onClick={this.resetNumber} />
-
-        <h1>{this.state.output}</h1>
+            <CalcButton value={"/"} onClick={this.changeOperation} />
+            <CalcButton value={"Reset"} onClick={this.resetNumber} />
+          </div>
+        </div>
       </div>
     );
   }
